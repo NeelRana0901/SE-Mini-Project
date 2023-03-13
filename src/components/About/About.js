@@ -1,39 +1,71 @@
-import { Box, Container, Typography } from '@mui/material';
-import React from 'react';
+import React from "react";
+import { Box, Container, Typography } from "@mui/material";
+import Team from ".//team.json";
+
+import {
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaTwitter,
+} from "react-icons/fa";
 
 const About = () => {
-    return (
-        <Box id='about' sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            minHeight: '70vh'
-        }}
-            points="0,100 50,00, 100,100" >
-            <Container maxWidth="xl">
-                <Typography sx={{ color: 'primary.main', mx: 2, p: 2, textAlign: "center" }}
-                    variant='h4'>
-                    All-in-One Website Health Solution
-                </Typography>
-
-                <Typography sx={{ mx: 2, p: 2, textAlign: "center" }}
-                    variant='h6'>
-                    10 Years Of Experience in Medical Services
-                </Typography>
-
-                <Typography sx={{ mx: 2, p: 2, mb: 4, textAlign: "justify" }}
-                    variant='p'>One big thing I wanted to highlight is that our methodology is fairer to hospitals and health systems than horizontal sites. CareDash has many hospital reviews from real users, but the way we survey our patient users has less “motivated complainer bias.” Thus, I think the CareDash hospital reviews provider a more accurate view of real patient satisfaction. <br /><br />
-
-                    We think something between 8 to 9 out of 10 patients walks out of the hospital satisfied, but typical web reviews make hospitals look much worse. This negative bias in hospital reviews is a big deal because people are walking into their care journey with a negative mindset about the care they are going to get, and that’s not good. The scale is just off because of the motivated complainers.<br /><br />
-
-                    Be sure to leave a review on <strong>Health Haven</strong> of any hospital you’ve visited, whether you’ve had a negative or a positive experience. Share your suggestions about writing hospital reviews in the comments below or message us on facebook <a href="https://www.facebook.com/iamfoysal.h" target="_blank" rel="noopener noreferrer" >
-                        @Foysal
-                    </a>.
-                    <br /><br /><br />
-                </Typography>
-
-            </Container>
-        </Box>
-    );
+  console.log(Team);
+  return (
+    <Box
+      id="about"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "70vh",
+      }}
+      points="0,100 50,00, 100,100"
+    >
+      <Container maxWidth="xl">
+        <Typography
+          sx={{ color: "primary.main", mx: 2, p: 2, textAlign: "center" }}
+          variant="h4"
+        >
+          Team Member
+        </Typography>
+        <div className="flex w-full space-x-5 overflow-x-scroll scrollbar-thin scrollbar-thumb-[#FF5A5F] scrollbar-track-gray-500/40 items-center p-6 snap-x snap-mandatory">
+          {Team &&
+            Team.map((item, index) => {
+              return (
+                <li key={index} className="list-none">
+                  <div className="flex snap-center flex-col items-center border bg-[#292929]/10 dark:bg-[#292929]/70 rounded-lg p-10">
+                    <div className="items-center">
+                      <img
+                        alt="Team Members"
+                        src={item.imgLink}
+                        height={100}
+                        width={100}
+                        className="rounded-full"
+                      />
+                    </div>
+                    <div className="p-3 items-center">
+                      <p className="text-gray-900 text-center dark:text-gray-200 text-sm font-bold">
+                        {item.fullName}
+                      </p>
+                      <div className="bg-transparent flex">
+                        <div className="flex space-x-3">
+                          <FaGithub className="text-gray-400 hover:text-black dark:hover:text-black dark:text-gray-400" />
+                          <FaLinkedin className="text-gray-400 hover:text-blue-700 dark:hover:text-blue-700 dark:text-gray-400" />
+                          <FaInstagram className="text-gray-400 hover:text-pink-600 dark:hover:text-pink-600 dark:text-gray-400" />
+                          <FaFacebook className="text-gray-400 hover:text-blue-700 dark:hover:text-blue-700 dark:text-gray-400" />
+                          <FaTwitter className="text-gray-400 hover:text-cyan-600 dark:hover:text-cyan-600 dark:text-gray-400" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+        </div>
+      </Container>
+    </Box>
+  );
 };
 
 export default About;

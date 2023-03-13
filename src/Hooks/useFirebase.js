@@ -15,7 +15,7 @@ import {
 } from "firebase/auth";
 import { auth, provider } from "../components/Login/Firebase/Firebase.init";
 
-// initializeAuthentication();  
+// initializeAuthentication();
 
 const googleProvider = new GoogleAuthProvider();
 const facebookProvider = new FacebookAuthProvider();
@@ -60,7 +60,6 @@ const useFirebase = () => {
     });
     return () => unsubscribed;
   }, [auth]);
-  
 
   const logout = () => {
     setIsLoading(true);
