@@ -135,7 +135,7 @@ const Navbar = () => {
                   smooth
                   to="/about#about"
                 >
-                  About
+                  About Us
                 </MenuItem>
                 {!user?.email && (
                   <MenuItem
@@ -196,7 +196,7 @@ const Navbar = () => {
                 to="/about#about"
               >
                 <Button sx={{ my: 2, color: "white", display: "block" }}>
-                  About
+                  About Us
                 </Button>
               </HashLink>
               {!user?.email && (

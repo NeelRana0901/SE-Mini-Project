@@ -6,21 +6,9 @@ import Banner from "./Banner/Banner";
 import "./Home.css";
 import OurExperts from "./OurExperts/OurExperts";
 import Whyus from "./Whyus/Whyus";
-import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
-import EmailIcon from "@mui/icons-material/Email";
-import swal from "sweetalert";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const Home = () => {
-  //swal alert
-  const mailSendBtn = () => {
-    return swal(
-      "WOW!! Your subscription is done you will get update when we setup our mail server",
-      {
-        button: false,
-        icon: "success",
-      }
-    );
-  };
   return (
     <div id="home">
       <Banner></Banner>
@@ -31,48 +19,9 @@ const Home = () => {
       <OurExperts></OurExperts>
       <Box sx={{ p: 5, mb: 2, alignItems: "center" }}>
         <Typography sx={{ textAlign: "center" }} variant="h5">
-          {" "}
-          <SubscriptionsIcon
-            sx={{ color: "primary.main", mr: 1, my: 0.5 }}
-          />{" "}
-          Subscribe for our latest services and details
+          Developed By SECT Students Made With{" "}
+          <FavoriteIcon sx={{ color: "primary.main", mr: 1, mt: 2, my: 0.5 }} />
         </Typography>
-
-        <Box
-          sx={{
-            display: { xs: "flex-wrap", md: "flex" },
-            p: 2,
-            mt: 1,
-            mx: "auto",
-            minWidth: "70%",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "flex-end",
-              mb: 2,
-              mx: "auto",
-              minWidth: "70%",
-            }}
-          >
-            <EmailIcon sx={{ color: "action.active", mr: 1, my: 0.5 }} />
-            <TextField
-              fullWidth
-              id="fullWidth"
-              label="Enter Your Mail Address"
-              variant="standard"
-            />
-          </Box>
-          <Button
-            variant="outlined"
-            color="primary"
-            onClick={mailSendBtn}
-            startIcon={<SubscriptionsIcon />}
-          >
-            Subscribe
-          </Button>
-        </Box>
       </Box>
     </div>
   );
