@@ -1,4 +1,4 @@
-import { Button, Container, TextField, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import About from "../About/About";
@@ -19,8 +19,8 @@ const Home = () => {
       <OurExperts></OurExperts>
       <Box sx={{ p: 5, mb: 2, alignItems: "center" }}>
         <Typography sx={{ textAlign: "center" }} variant="h5">
-          Developed By SECT Students Made With{" "}
-          <FavoriteIcon sx={{ color: "primary.main", mr: 1, mt: 2, my: 0.5 }} />
+          Developed By SECT Students With{" "}
+          <FavoriteIcon sx={{ color: "primary.main", mr: 1, my: 0.5 }} />
         </Typography>
       </Box>
     </div>
