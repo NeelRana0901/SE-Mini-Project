@@ -109,7 +109,7 @@ const Navbar = () => {
                   smooth
                   to="/home#home"
                 >
-                  home
+                  Home
                 </MenuItem>
 
                 <MenuItem
@@ -193,7 +193,7 @@ const Navbar = () => {
               <HashLink
                 className="text-style text-style-fullscrn "
                 smooth
-                to="/about#about"
+                to="/doctors#doctors"
               >
                 <Button sx={{ my: 2, color: "white", display: "block" }}>
                   About Us

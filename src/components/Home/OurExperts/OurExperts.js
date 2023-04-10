@@ -9,29 +9,16 @@ import {
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { HashLink } from "react-router-hash-link";
-import useDocData from "../../../Hooks/useDocData";
+import useDocData from  "../../About/team.json" ;
+
 
 const OurExperts = () => {
-  const [ourExperts, setOurExperts] = useState([]);
-  const mainData = useDocData();
-  let experts = mainData[0];
-
-  // handle undifined problem in mapping data
-  useEffect(() => {
-    if (experts.length > 1) {
-      const serv = experts?.slice(0, 3);
-      setOurExperts(serv);
-    } else {
-      <LinearProgress color="secondary" />;
-    }
-  }, [experts]);
-
   return (
     <Box
       sx={{
-        bgcolor: "#fce4ec",
+        bgcolor: "#5555ab",
         color: "primary.main",
         p: 2,
         mb: 2,
@@ -47,11 +34,11 @@ const OurExperts = () => {
           We are committed to ensure you the best service
         </Typography>
 
-        {experts?.length > 1 && (
+        
           <Grid container spacing={3}>
-            {ourExperts?.map((experts) => (
+            {useDocData?.map((experts) => (
               <Grid
-                key={experts.doc_id}
+                key={experts.id}
                 item
                 xs={12}
                 sm={6}
@@ -78,7 +65,7 @@ const OurExperts = () => {
                   <CardActionArea>
                     <Avatar
                       alt="doctor image"
-                      src={experts?.doc_img}
+                      src={experts?.imgLink}
                       sx={{
                         width: 256,
                         height: 256,
@@ -87,21 +74,21 @@ const OurExperts = () => {
                     />
 
                     <CardContent sx={{ display: "flex", mx: "auto", my: 2 }}>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Specialist in {experts.specialize}
-                      </Typography>
+                      {/* <Typography gutterBottom variant="h5" component="div">
+                        Specialist in {experts}
+                      </Typography> */}
                     </CardContent>
                     <Typography gutterBottom variant="h6" component="div">
-                      Dr. {experts.name}
+                      Dr. {experts.fullName}
                     </Typography>
                   </CardActionArea>
                 </Card>
               </Grid>
             ))}
           </Grid>
-        )}
+        
 
-        <Typography sx={{ mx: 2, p: 2, textAlign: "end" }}>
+        {/* <Typography sx={{ mx: 2, p: 2, textAlign: "end" }}>
           <HashLink
             smooth
             to="/doctors#doctors"
@@ -109,9 +96,9 @@ const OurExperts = () => {
             color="primary"
           >
             {" "}
-            Meet Our Expert Team{" "}
+            Meet Our Team Members
           </HashLink>
-        </Typography>
+        </Typography> */}
       </Container>
     </Box>
   );

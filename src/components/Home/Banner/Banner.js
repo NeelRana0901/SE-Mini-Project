@@ -40,20 +40,14 @@ const Banner = () => {
     {
       name: "You are just one click away from your healthy life",
       description: "Probably the most random thing you have ever seen!",
-      img: "https://img.freepik.com/free-photo/close-up-doctor-is-showing-medical-analytics-data_33799-4417.jpg?w=996",
+      img: "https://images.unsplash.com/photo-1625134673337-519d4d10b313?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1538&q=80",
     },
     {
-      name: "Consult with experts Online 24/7",
-      description:
-        "Get Online support from oue expert Doctor 24/7 and lead a healthy life",
-      img: "https://img.freepik.com/free-photo/make-appointment-see-doctor-online-diagnosis-treatmentfamily-health-care_537132-1364.jpg?w=996",
+      name: "24/7 Support",
+      description: "24/7 Support",
+      img: "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     },
-    {
-      name: "Check Your Health Condition Regularly",
-      description:
-        "Upto date with your health condition prevention is always better than cure",
-      img: "https://img.freepik.com/free-photo/young-male-psysician-with-patient-measuring-blood-pressure_1303-17879.jpg?t=st=1651807889~exp=1651808489~hmac=72e2292253947f9900d3250347f844e08a169fc70d5fb64d4cf51674000033fa&w=996",
-    },
+    
   ];
   return (
     <div>
