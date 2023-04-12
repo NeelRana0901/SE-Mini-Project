@@ -1,133 +1,222 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Container,
-  Grid,
-  Typography,
-} from "@mui/material";
-import HomeIcon from "@mui/icons-material/Home";
-import useData from "../../Hooks/useData";
-import { HashLink } from "react-router-hash-link";
-import ReadMoreIcon from "@mui/icons-material/ReadMore";
-import { useHistory } from "react-router-dom";
-import LoadingScreen from "../LoadingScreen/LoadingScreen";
+import React, { useState } from "react";
+import "./ServiceDetails/Services.css";
+// assuming your JSON data is stored in a variable called "doctors"
+const doctors = [
+  {
+    Doctor_id: "004",
+    Doctor_name: "Dr. Ashutosh V Jokhakar",
+    Treatment_id: "123",
+    Treatment_name: "NA",
+    Diseases_name: "Malaria",
+    Treatment_cost: "NA",
+    "Appointment fee": "450",
+    Hospital_id: "48",
 
-const Services = () => {
-  // const [ourServices, setOurServices] = useState([])
-  const services = useData();
-  const history = useHistory();
-  const ServiceDetails = (servId) => {
-    history.push(`/services/details/${servId}`);
-    console.log(servId);
+    Area: "Citylight",
+    Hospital_name: "Suvidha Clinic",
+    Hospital_full_address:
+      " Suvidha Clinic, G 15/16, Bhagwati Ashish Complex, Citylight Road Surat 395007",
+  },
+
+  {
+    Doctor_id: "005",
+    Doctor_name: "Dr. Sharat Gupta",
+    Treatment_id: "124",
+    Treatment_name: "Chemotherapy",
+    Diseases_name: "Cancer",
+    Treatment_cost: "NA",
+    "Appointment fee": "300",
+    Hospital_id: "49",
+
+    Area: "Citylight",
+    Hospital_name: "Healing Hand Hospital",
+    Hospital_full_address:
+      "  2nd floor Prasham Building, City light Road near Bank Of Baroda Surat-395007",
+  },
+  {
+    Doctor_id: "008",
+    Doctor_name: "Dr. Kaushik Soni",
+    Treatment_id: "127",
+    Treatment_name: "NA",
+    Diseases_name: "fever",
+    Treatment_cost: "NA",
+    "Appointment fee": "370",
+    Hospital_id: "52",
+    Area: "Adajan",
+    Hospital_name: "Nidan Clinic",
+    Hospital_full_address:
+      " Nidan Clinc,near Gujarat Gas station,Adajan Road Surat-395007",
+  },
+  {
+    Doctor_id: "006",
+    Doctor_name: "Dr. Pradip Martin",
+    Treatment_id: "125",
+    Treatment_name: "NA",
+    Diseases_name: "Food Poisoning",
+    Treatment_cost: "NA",
+    "Appointment fee": "500",
+    Hospital_id: "50",
+
+    Area: "Citylight",
+    Hospital_name: "Healing Hand Hospital",
+    Hospital_full_address:
+      " 3rd floor Prasham Building, City light Road near Bank Of Baroda Surat-395007",
+  },
+  {
+    Doctor_id: "011",
+    Doctor_name: "Dr.Ramesh Patel",
+    Treatment_id: "131",
+    Treatment_name: "NA",
+    Diseases_name: "Back-Pain",
+    Treatment_cost: "NA",
+    "Appointment fee": "350",
+    Hospital_id: "54",
+    Area: "Adajan",
+    Hospital_name: "BAPS Pramukh Swami Hospital",
+    Hospital_full_address:
+      "5QQX+R72, Shri Pramukh Swami Maharaj Marg, Adajan Char Rasta, Adajan, Surat, Gujarat 395009",
+  },
+
+  {
+    Doctor_id: "000",
+    Doctor_name: "Dr. Sanjay Agrawal",
+    Treatment_id: "120",
+    Diseases_name: "Diabetes",
+    Treatment_name: "NA",
+    Treatment_cost: "NA",
+    "Appointment fee": "300",
+    Hospital_id: "45",
+
+    Area: "Citylight",
+    Hospital_name: "Aman Hospital",
+    Hospital_full_address:
+      "Diabetologist Clinic 4th Floor, Siddhi Complex, Near ICICI Bank, City Light ,Surat",
+  },
+  {
+    Doctor_id: "002",
+    Doctor_name: " Dr. Shailesh Gandhi",
+    Treatment_id: "121",
+    Treatment_name: "NA",
+    Diseases_name: "Typhoid",
+    Treatment_cost: "NA",
+    "Appointment fee": "150",
+    Hospital_id: "46",
+
+    Area: "Citylight",
+    Hospital_name: "Shalibhadra Clinic",
+    Hospital_full_address:
+      "Shalibhadra Clinic, Ground floor, Shalibhadra Apartment, parle point",
+  },
+  {
+    Doctor_id: "003",
+    Doctor_name: "Dr. Yesha Chokshi",
+    Treatment_id: "122",
+    Treatment_name: "Delivery",
+    Diseases_name: "NA",
+    Treatment_cost: "NA",
+    "Appointment fee": "500",
+    Hospital_id: "47",
+    Area: "Citylight",
+    Hospital_name: "Shree Hospital",
+    Hospital_full_address:
+      "Shree Hospital 3rd floor Siddhi Shopping Center, Citylight Main,Road,Surat,395007",
+  },
+
+  {
+    Doctor_id: "007",
+    Doctor_name: "Dr. Jayesh Dbhuwala",
+    Treatment_id: "126",
+    Treatment_name: "NA",
+    Diseases_name: "Skin related",
+    Treatment_cost: "NA",
+    "Appointment fee": "350",
+    Hospital_id: "51",
+    Area: "Citylight",
+    Hospital_name: "City light Skin Clinic",
+    Hospital_full_address:
+      " City light Skin Clinic,22 Upper Ground AgrasenPoint, Citylight Road Surat-395007",
+  },
+
+  // add more doctors here...
+];
+
+const DoctorFinder = () => {
+  // state variables to store the user's selected disease and location
+  const [selectedDisease, setSelectedDisease] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("");
+
+  // function to filter doctors based on the selected disease and location
+  const getDoctorSuggestions = () => {
+    if (!selectedDisease || !selectedLocation) {
+      return []; // if either disease or location is not selected, return an empty array
+    }
+
+    const matchingDoctors = doctors.filter(
+      (doctor) =>
+        doctor.Diseases_name.toLowerCase() === selectedDisease.toLowerCase() &&
+        doctor.Area.toLowerCase() === selectedLocation.toLowerCase()
+    );
+
+    return matchingDoctors;
   };
 
   return (
-    <Box
-      id="services"
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        minHeight: "100vh",
-        bgcolor: "#fce4ec",
-        color: "primary.main",
-        p: 2,
-        mb: 2,
-        mt: 6,
-        textAlign: "center",
-      }}
-    >
-      {services[0].length > 1 ? (
-        <Container maxWidth="xl">
-          <Typography sx={{ mt: 2, mb: 2, fontWeight: 600 }} variant="h6">
-            Our Services
-          </Typography>
+    <div className="main-container">
 
-          <Grid container spacing={3}>
-            {services[0]?.map((service) => (
-              <Grid key={service.id} item xs={12} sm={6} md={6} lg={4}>
-                <Card
-                  sx={{
-                    mx: "auto",
-                    maxWidth: 345,
-                    transition: "0.5s all ease-in-out",
-                    ":hover": {
-                      boxShadow: 10,
-                      color: "#e91e63",
-                    },
-                    img: { transition: "0.5s all ease-in-out" },
-                    ":hover img": {
-                      transform: "scale(1.1)",
-                    },
-                  }}
-                >
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="240"
-                      image={service?.service_img}
-                      alt="card image of service"
-                    />
-                    <CardContent
-                      sx={{
-                        display: "flex",
-                        flexWrap: "wrap",
-                        mx: "auto",
-                        my: 2,
-                      }}
-                    >
-                      <CardMedia
-                        component="img"
-                        sx={{ width: 40, mr: 1, mx: "auto" }}
-                        image={service?.icon}
-                        alt="service icon"
-                      />
-                      <Typography gutterBottom variant="h5" component="div">
-                        Consult for {service.treatment}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-
-                  <CardActions>
-                    <Typography sx={{ mx: 2, p: 2, textAlign: "end" }}>
-                      <Button
-                        onClick={() => {
-                          ServiceDetails(service.id);
-                        }}
-                        variant="contained"
-                        color="primary"
-                        startIcon={<ReadMoreIcon />}
-                      >
-                        See More Details...
-                      </Button>
-                    </Typography>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-
-          <HashLink smooth to="/home#home" className="text-style">
-            {" "}
-            <Button
-              variant="contained"
-              color="primary"
-              startIcon={<HomeIcon />}
-              sx={{ mb: 5, mt: 5 }}
-            >
-              Back to Home
-            </Button>
-          </HashLink>
-        </Container>
-      ) : (
-        <LoadingScreen></LoadingScreen>
-      )}
-    </Box>
+    <div className="doctor-finder">
+      <h2>Find a Doctor</h2>
+      <div>
+        <label htmlFor="disease-select">Select Disease:</label>
+        <select
+          id="disease-select"
+          onChange={(e) => setSelectedDisease(e.target.value)}
+        >
+          <option value="">Select a disease</option>
+          <option value="fever">fever</option>
+          <option value="Malaria">Malaria</option>
+          <option value="Cancer">Cancer</option>
+          <option value="Food Poisoning">Food Poisoning</option>
+          <option value="Back-Pain">Back-Pain</option>
+          <option value="Diabetes">Diabetes</option>
+          <option value="Typhoid">Typhoid</option>
+          <option value="Delivery">Delivery</option>
+          <option value="Skin related">Skin related</option>
+          {/* add more diseases here... */}
+        </select>
+      </div>
+      <div>
+        <label htmlFor="location-select">Select Location:</label>
+        <select
+          id="location-select"
+          onChange={(e) => setSelectedLocation(e.target.value)}
+        >
+          <option value="">Select a location</option>
+          <option value="Citylight">Citylight</option>
+          <option value="Adajan">Adajan</option>
+          {/* add more locations here... */}
+        </select>
+      </div>
+      <div>
+        {getDoctorSuggestions().length === 0 ? (
+          <p>No doctors found.</p>
+        ) : (
+          <>
+            <p>{getDoctorSuggestions().length} doctors found:</p>
+            <ul>
+              {getDoctorSuggestions().map((doctor) => (
+                <li key={doctor.Doctor_id}>
+                  {doctor.Doctor_name} ({doctor.Treatment_name}) at{" "}
+                  {doctor.Hospital_name}
+                  <div>({doctor.Hospital_full_address})</div>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </div>
+    </div>
+    </div>
   );
 };
 
-export default Services;
+export default DoctorFinder;

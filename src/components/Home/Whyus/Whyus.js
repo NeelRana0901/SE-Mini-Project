@@ -35,8 +35,8 @@ const Whyus = () => {
   return (
     <Box
       sx={{
-        bgcolor: "#fce4ec",
-        color: "primary.main",
+        bgcolor: "#b2a4ff",
+        color: "#black",
         p: 2,
         mb: 2,
         textAlign: "center",
@@ -67,7 +67,7 @@ const Whyus = () => {
                     mb: 2,
                     ":hover": {
                       boxShadow: 10,
-                      color: "#e91e63",
+                      color: "#5555ab",
                     },
                     img: { transition: "0.5s all ease-in-out" },
                     ":hover img": {
@@ -98,11 +98,20 @@ const Whyus = () => {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Typography sx={{ mx: 2, p: 2, textAlign: "end" }}>
+                    <Typography
+                      sx={{
+                        mx: 2,
+                        p: 2,
+                        textAlign: "end",
+                        ":hover": {
+                          color: "#5555ab",
+                        },
+                      }}
+                    >
                       <Link
                         className="text-style"
                         to="/services"
-                        color="primary"
+                        color="#5555ab"
                       >
                         See More Details...
                       </Link>
@@ -123,22 +132,6 @@ const Whyus = () => {
             See All services
           </HashLink>
         </Typography>
-        {/* <Card sx={{ display: "flex", mx: "auto", my: 2 }}>
-          <Box sx={{ display: "flex", flexDirection: "row" }}>
-            <CardContent sx={{ flex: "1 0 auto" }}>
-              <Typography component="div" variant="h5">
-                {service.treatment}
-              </Typography>
-            </CardContent>
-          </Box>
-          <CardMedia
-            component="img"
-            sx={{ width: 151 }}
-            image={service?.service_img}
-            alt="User Image"
-          />
-        </Card> */}
-        ;
       </Container>
     </Box>
   );

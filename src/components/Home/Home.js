@@ -13,13 +13,13 @@ const Home = () => {
     <div id="home">
       <Banner></Banner>
       <Whyus></Whyus>
-      <Container className="content-container" maxWidth="xl">
+      {/* <Container className="content-container" maxWidth="xl">
         <About></About>
-      </Container>
+      </Container> */}
       <OurExperts></OurExperts>
-      <Box sx={{ p: 5, mb: 2, alignItems: "center" }}>
+      <Box sx={{ p: 5, mb: 2, alignItems: "center", }}>
         <Typography sx={{ textAlign: "center" }} variant="h5">
-          Developed By SECT Students With{" "}
+          Developed By SCET Students With{" "}
           <FavoriteIcon sx={{ color: "primary.main", mr: 1, my: 0.5 }} />
         </Typography>
       </Box>

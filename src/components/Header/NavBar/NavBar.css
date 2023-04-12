@@ -1,11 +1,11 @@
 .text-style {
   text-decoration: none;
-  color: #212121;
+  color: black;
 }
 
 .text-style:hover {
   text-decoration: none;
-  color: #d81b60;
+  color: #5555ab;
 }
 
 .text-style-fullscrn {

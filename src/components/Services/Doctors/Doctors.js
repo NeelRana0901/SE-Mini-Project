@@ -38,7 +38,7 @@ const Doctors = () => {
           <Box
             sx={{
               bgcolor: "#fce4ec",
-              color: "primary.main",
+              color: "primary.heading",
               p: 2,
               mb: 2,
               mt: 6,

@@ -1,0 +1,122 @@
+/* Add this CSS code to your stylesheet */
+.doctor-finder {
+  max-width: 800px;
+  width: 80%;
+  padding: 25px 55px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+@media only screen and(min-width: 768px) {
+  /* .doctor-finder {
+    max-width: 800px;
+  } */
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow:1;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 68.5px);
+  /* padding: 25px; */
+  background-color: #B2A4FF;
+}
+
+.doctor-finder h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.doctor-finder label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #555;
+  display: block;
+}
+
+.doctor-finder select {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 2px solid #ddd;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.doctor-finder select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.doctor-finder .doctor-suggestions {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.doctor-finder .doctor-suggestions p {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.doctor-finder .doctor-suggestions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.doctor-finder .doctor-suggestions li {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.doctor-finder .doctor-suggestions li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-finder .doctor-suggestions li:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #007bff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
+.doctor-finder .doctor-suggestions li:hover:after {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .doctor-finder {
+    max-width: 350px;
+  }
+
+  .doctor-finder .doctor-suggestions li {
+    width: 100%;
+    text-align: center;
+  }
+}

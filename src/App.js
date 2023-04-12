@@ -19,16 +19,19 @@ import PrivetRoute from "./PrivetRoute/PrivetRoute";
 export const myTheme = createTheme({
   palette: {
     primary: {
-      main: "#e91e63",
+      // main: "#e91e63",
+      main: "#5555ab",
+      heading: "#ffffff",
     },
     secondary: {
       main: "#f48fb1",
+      // main: "#e6e6fa",
     },
     alternate: {
       main: "#fff",
     },
     text: {
-      secondary: "#212121",
+      secondary: "#78a2de",
     },
   },
   typography: {

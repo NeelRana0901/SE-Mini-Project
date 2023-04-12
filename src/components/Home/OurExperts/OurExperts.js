@@ -11,15 +11,14 @@ import {
 import { Box } from "@mui/system";
 import React from "react";
 import { HashLink } from "react-router-hash-link";
-import useDocData from  "../../About/team.json" ;
-
+import useDocData from "../../About/team.json";
 
 const OurExperts = () => {
   return (
     <Box
       sx={{
-        bgcolor: "#5555ab",
-        color: "primary.main",
+        bgcolor: "#b2a4ff",
+        color: "primary.heading",
         p: 2,
         mb: 2,
         textAlign: "center",
@@ -34,71 +33,64 @@ const OurExperts = () => {
           We are committed to ensure you the best service
         </Typography>
 
-        
-          <Grid container spacing={3}>
-            {useDocData?.map((experts) => (
-              <Grid
-                key={experts.id}
-                item
-                xs={12}
-                sm={6}
-                md={4}
-                lg={3}
-                sx={{ mx: "auto" }}
+        <Grid
+          container
+          spacing={1}
+        >
+          {useDocData?.map((experts) => (
+            <Grid
+              key={experts.id}
+              item
+              xs={9}
+              sm={5}
+              md={4}
+              lg={2}
+              sx={{ mx: "auto" }}
+            >
+              <Card
+                sx={{
+                  mx: "auto",
+                  boxShadow: 5,
+                  maxWidth: 290,
+                  transition: "0.5s all ease-in-out",
+                  ":hover": {
+                    color: "#6c4296",
+                    boxShadow: 1,
+                  },
+                  img: { transition: "0.5s all ease-in-out" },
+                  ":hover img": {
+                    transform: "scale(1.1)",
+                  },
+                  
+                }}
               >
-                <Card
-                  sx={{
-                    mx: "auto",
-                    boxShadow: 10,
-                    maxWidth: 345,
-                    transition: "0.5s all ease-in-out",
-                    ":hover": {
-                      color: "#e91e63",
-                      boxShadow: 1,
-                    },
-                    img: { transition: "0.5s all ease-in-out" },
-                    ":hover img": {
-                      transform: "scale(1.1)",
-                    },
-                  }}
-                >
-                  <CardActionArea>
-                    <Avatar
-                      alt="doctor image"
-                      src={experts?.imgLink}
-                      sx={{
-                        width: 256,
-                        height: 256,
-                        mx: "auto",
-                      }}
-                    />
+                <CardActionArea>
+                  <Avatar
+                    alt="doctor image"
+                    src={experts?.imgLink}
+                    sx={{
+                      width: 180,
+                      height: 180,
+                      top: 10,
+                      mx: "auto",
+                    }}
+                  />
 
-                    <CardContent sx={{ display: "flex", mx: "auto", my: 2 }}>
-                      {/* <Typography gutterBottom variant="h5" component="div">
-                        Specialist in {experts}
-                      </Typography> */}
-                    </CardContent>
-                    <Typography gutterBottom variant="h6" component="div">
-                      Dr. {experts.fullName}
-                    </Typography>
-                  </CardActionArea>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        
-
-        {/* <Typography sx={{ mx: 2, p: 2, textAlign: "end" }}>
-          <HashLink
-            smooth
-            to="/doctors#doctors"
-            className="text-style"
-            color="primary"
-          >
-            {" "}
-            Meet Our Team Members
-          </HashLink>
-        </Typography> */}
+                  <Typography
+                    sx={{
+                      padding: 2,
+                    }}
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                  >
+                    {experts.fullName}
+                  </Typography>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </Box>
   );

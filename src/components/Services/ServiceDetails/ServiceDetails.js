@@ -40,7 +40,8 @@ const ServiceDetails = () => {
   return (
     <Box
       sx={{
-        bgcolor: "#fce4ec",
+        // bgcolor: "#fce4ec",
+        bgcolor: "#e6e6fa",
         color: "primary.main",
         p: 2,
         mb: 2,

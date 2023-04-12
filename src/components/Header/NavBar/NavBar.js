@@ -58,7 +58,7 @@ const Navbar = () => {
     }
   };
   return (
-    <Box sx={{ mt: 8 }}>
+    <Box sx={{ mt: ["68.5px"] }}>
       <AppBar position="fixed" color="primary" sx={{ top: 0, bottom: "auto" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
