@@ -2,16 +2,13 @@ import {
   Avatar,
   Card,
   CardActionArea,
-  CardContent,
   Container,
   Grid,
-  LinearProgress,
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import { HashLink } from "react-router-hash-link";
-import useDocData from "../../About/team.json";
+import useDocData from "./team.json";
 
 const OurExperts = () => {
   return (
@@ -33,10 +30,7 @@ const OurExperts = () => {
           We are committed to ensure you the best service
         </Typography>
 
-        <Grid
-          container
-          spacing={1}
-        >
+        <Grid container spacing={1}>
           {useDocData?.map((experts) => (
             <Grid
               key={experts.id}
@@ -61,7 +55,6 @@ const OurExperts = () => {
                   ":hover img": {
                     transform: "scale(1.1)",
                   },
-                  
                 }}
               >
                 <CardActionArea>

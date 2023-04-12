@@ -2,7 +2,6 @@ import { Switch } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import About from "./components/About/About";
 import Header from "./components/Header/Header/Header";
 import Home from "./components/Home/Home";
 import { ThemeProvider } from "@mui/material";
@@ -19,13 +18,11 @@ import PrivetRoute from "./PrivetRoute/PrivetRoute";
 export const myTheme = createTheme({
   palette: {
     primary: {
-      // main: "#e91e63",
       main: "#5555ab",
       heading: "#ffffff",
     },
     secondary: {
       main: "#f48fb1",
-      // main: "#e6e6fa",
     },
     alternate: {
       main: "#fff",
@@ -62,9 +59,6 @@ function App() {
               </PrivetRoute>
               <Route path="/login">
                 <Login></Login>
-              </Route>
-              <Route path="/about">
-                <About></About>
               </Route>
               <Route path="/profile">
                 <Login></Login>

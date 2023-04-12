@@ -15,12 +15,11 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  flex-grow:1;
+  flex-grow: 1;
   align-items: center;
   justify-content: center;
   height: calc(100vh - 68.5px);
-  /* padding: 25px; */
-  background-color: #B2A4FF;
+  background-color: #b2a4ff;
 }
 
 .doctor-finder h2 {

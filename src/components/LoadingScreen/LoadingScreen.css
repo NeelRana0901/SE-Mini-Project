@@ -6,7 +6,6 @@
 
 .rhombus {
   margin: 40px 0 0 60px;
-  /*background: #fcfcfc;*/
   margin: auto;
   margin-top: 100px;
   border-radius: 10px;
@@ -19,7 +18,7 @@
 .rhombus:before {
   content: "";
   position: absolute;
-  background: #ea4c89;
+  background: #5555ab;
   height: 40px;
   width: 40px;
   z-index: 0;
@@ -31,7 +30,7 @@
 .rhombus .circle1 {
   content: "";
   position: absolute;
-  background: #ea4c89;
+  background: #5555ab;
   height: 40px;
   width: 40px;
   z-index: 1;
@@ -45,7 +44,7 @@
 .rhombus .circle2 {
   content: "";
   position: absolute;
-  background: #ea4c89;
+  background: #5555ab;
   height: 40px;
   width: 40px;
   z-index: 1;

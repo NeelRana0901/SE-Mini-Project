@@ -1,7 +1,6 @@
-import { Container, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import About from "../About/About";
 import Banner from "./Banner/Banner";
 import "./Home.css";
 import OurExperts from "./OurExperts/OurExperts";
@@ -13,11 +12,8 @@ const Home = () => {
     <div id="home">
       <Banner></Banner>
       <Whyus></Whyus>
-      {/* <Container className="content-container" maxWidth="xl">
-        <About></About>
-      </Container> */}
       <OurExperts></OurExperts>
-      <Box sx={{ p: 5, mb: 2, alignItems: "center", }}>
+      <Box sx={{ p: 5, mb: 2, alignItems: "center" }}>
         <Typography sx={{ textAlign: "center" }} variant="h5">
           Developed By SCET Students With{" "}
           <FavoriteIcon sx={{ color: "primary.main", mr: 1, my: 0.5 }} />
