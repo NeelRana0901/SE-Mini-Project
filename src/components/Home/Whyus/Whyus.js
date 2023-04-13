@@ -59,6 +59,11 @@ const Whyus = () => {
                 xs={12}
                 md={6}
                 lg={4}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent:"center",
+                }}
               >
                 <Card
                   sx={{

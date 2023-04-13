@@ -15,7 +15,7 @@ const OurExperts = () => {
     <Box
       sx={{
         bgcolor: "#b2a4ff",
-        color: "primary.heading",
+        color: "black",
         p: 2,
         mb: 2,
         textAlign: "center",
@@ -72,9 +72,10 @@ const OurExperts = () => {
                   <Typography
                     sx={{
                       padding: 2,
+                      fontSize: 24,
                     }}
                     gutterBottom
-                    variant="h6"
+                    variant="p"
                     component="div"
                   >
                     {experts.fullName}

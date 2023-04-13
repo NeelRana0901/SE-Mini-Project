@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, CssBaseline, Grid } from "@mui/material";
+import { Box, Container, CssBaseline, Grid, Avatar } from "@mui/material";
 import GoogleButton from "react-google-button";
 import "./Login.css";
 import useAuth from "../../../Hooks/useAuth";
@@ -35,10 +35,9 @@ const Login = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        minHeight: "100vh",
       }}
     >
-      <Container id="login" maxWidth="xl">
+      <Container id="login" maxWidth="3xl" class="background">
         {user?.email ? (
           <>
             <UserProfile />
@@ -55,10 +54,22 @@ const Login = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  overflowY: "hidden",
+                  justifyContent: "center",
                 }}
               >
                 {/* google btn */}
-                <Grid container sx={{ mt: 2, mb: 3 }} justifyContent="flex-end">
+                  <Grid container sx={{ mt: 2, mb: 3 }} justifyContent="flex">
+                  <Avatar
+                  className="loginImage"
+                    alt="doctor image"
+                    // src="LoginPage.jpg"
+                    sx={{
+                      width: 500,
+                      height: 500,
+                      mx: "auto",
+                    }}
+                  />
                   <Grid item>
                     <GoogleButton
                       className="google-btn"

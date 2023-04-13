@@ -37,8 +37,9 @@ const Doctors = () => {
         <>
           <Box
             sx={{
-              bgcolor: "#fce4ec",
-              color: "primary.heading",
+              // bgcolor: "#fce4ec",
+              bgcolor: "#b2a4ff",
+              color: "black",
               p: 2,
               mb: 2,
               mt: 6,
@@ -68,7 +69,7 @@ const Doctors = () => {
                         maxWidth: 345,
                         transition: "0.5s all ease-in-out",
                         ":hover": {
-                          color: "#e91e63",
+                          color: "#5555ab",
                           boxShadow: 1,
                         },
                         img: { transition: "0.5s all ease-in-out" },

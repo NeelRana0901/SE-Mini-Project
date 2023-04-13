@@ -19,7 +19,8 @@ import "./NavBar.css";
 import useAuth from "../../../Hooks/useAuth";
 import { useHistory } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-
+import LOGO from "./Logo.png";
+//
 // const pages = ['home', 'services', 'doctors', 'Appointment', 'about', 'login'];
 const settings = ["Profile", "Logout"];
 
@@ -66,14 +67,27 @@ const Navbar = () => {
               variant="h6"
               noWrap
               component="div"
-              sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                alignItems: "center",
+                justifyContent:"center"
+              }}
             >
               {" "}
-              <HealingTwoToneIcon fontSize="large" />
+              <img className="logo" src={LOGO} alt="Logo" />
               HealthCare System
             </Typography>
 
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: "flex", md: "none" },
+                alignItems: "center",
+                justifyContent: "center",
+                spaceX: "5",
+              }}
+            >
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -129,14 +143,6 @@ const Navbar = () => {
                 >
                   Doctors
                 </MenuItem>
-                <MenuItem
-                  bgcolor="primary"
-                  component={HashLink}
-                  smooth
-                  to="/about#about"
-                >
-                  About Us
-                </MenuItem>
                 {!user?.email && (
                   <MenuItem
                     bgcolor="primary"
@@ -160,56 +166,53 @@ const Navbar = () => {
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {/*-------- large skin navigation-------- */}
-
-              <HashLink
-                className="text-style text-style-fullscrn "
-                smooth
-                to="/home#home"
-              >
-                <Button sx={{ my: 2, color: "white", display: "block" }}>
-                  Home
-                </Button>
-              </HashLink>
-
-              <HashLink
-                className="text-style text-style-fullscrn "
-                smooth
-                to="/services#services"
-              >
-                <Button sx={{ my: 2, color: "white", display: "block" }}>
-                  Services
-                </Button>
-              </HashLink>
-
-              <HashLink
-                className="text-style text-style-fullscrn "
-                smooth
-                to="/doctors#doctors"
-              >
-                <Button sx={{ my: 2, color: "white", display: "block" }}>
-                  Doctors
-                </Button>
-              </HashLink>
-              <HashLink
-                className="text-style text-style-fullscrn "
-                smooth
-                to="/doctors#doctors"
-              >
-                <Button sx={{ my: 2, color: "white", display: "block" }}>
-                  About Us
-                </Button>
-              </HashLink>
-              {!user?.email && (
+              <div className="shiv">
                 <HashLink
                   className="text-style text-style-fullscrn "
                   smooth
-                  to="/login#login"
+                  to="/home#home"
                 >
                   <Button sx={{ my: 2, color: "white", display: "block" }}>
-                    Login
+                    Home
                   </Button>
                 </HashLink>
-              )}
+
+                <HashLink
+                  className="text-style text-style-fullscrn "
+                  smooth
+                  to="/services#services"
+                >
+                  <Button sx={{ my: 2, color: "white", display: "block" }}>
+                    Services
+                  </Button>
+                </HashLink>
+
+                <HashLink
+                  className="text-style text-style-fullscrn "
+                  smooth
+                  to="/doctors#doctors"
+                >
+                  <Button sx={{ my: 2, color: "white", display: "block" }}>
+                    Doctors
+                  </Button>
+                </HashLink>
+                <HashLink
+                  className="text-style text-style-fullscrn "
+                  smooth
+                  to="/doctors#doctors"
+                ></HashLink>
+                {!user?.email && (
+                  <HashLink
+                    className="text-style text-style-fullscrn "
+                    smooth
+                    to="/login#login"
+                  >
+                    <Button sx={{ my: 2, color: "white", display: "block" }}>
+                      Login
+                    </Button>
+                  </HashLink>
+                )}
+              </div>
             </Box>
 
             {/* user info and navigation btn */}

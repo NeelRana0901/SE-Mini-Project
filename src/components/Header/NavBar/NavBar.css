@@ -11,3 +11,16 @@
 .text-style-fullscrn {
   background-color: #5555ab;
 }
+.shiv{
+display: flex; 
+/* box-sizing: border-box; */
+justify-content: center;
+justify-content: space-between;
+/* padding-left: 395px; */
+align-items: center;
+}
+
+.logo{
+  width: 100px;
+  height: 100px;
+}
