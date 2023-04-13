@@ -12,15 +12,14 @@
   background-color: #5555ab;
 }
 .shiv{
-display: flex; 
-/* box-sizing: border-box; */
+display: flex;
 justify-content: center;
 justify-content: space-between;
-/* padding-left: 395px; */
 align-items: center;
 }
 
 .logo{
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
+  margin: 4px;
 }

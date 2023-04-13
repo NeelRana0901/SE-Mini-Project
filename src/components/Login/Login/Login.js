@@ -1,11 +1,12 @@
 import React from "react";
-import { Box, Container, CssBaseline, Grid, Avatar } from "@mui/material";
+import { Box, Container, CssBaseline, Grid } from "@mui/material";
 import GoogleButton from "react-google-button";
 import "./Login.css";
 import useAuth from "../../../Hooks/useAuth";
 import UserProfile from "./UserProfile/UserProfile";
 import { useLocation } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import LOGO from './LoginPage.jpg';
 
 const Login = () => {
   const { singInUsingGoogle, user, setUser, setError, setIsLoading } =
@@ -48,6 +49,7 @@ const Login = () => {
             <Container component="main" maxWidth="xs">
               <CssBaseline />
               <Box
+              className="loginPage"
                 sx={{
                   marginTop: 15,
                   marginBottom: 8,
@@ -59,17 +61,7 @@ const Login = () => {
                 }}
               >
                 {/* google btn */}
-                  <Grid container sx={{ mt: 2, mb: 3 }} justifyContent="flex">
-                  <Avatar
-                  className="loginImage"
-                    alt="doctor image"
-                    // src="LoginPage.jpg"
-                    sx={{
-                      width: 500,
-                      height: 500,
-                      mx: "auto",
-                    }}
-                  />
+                  <img className="loginImage" src={LOGO}  alt="Logo" />
                   <Grid item>
                     <GoogleButton
                       className="google-btn"
@@ -77,7 +69,7 @@ const Login = () => {
                       onClick={handleGoogleSignIn}
                     />
                   </Grid>
-                </Grid>
+
               </Box>
             </Container>
           </>

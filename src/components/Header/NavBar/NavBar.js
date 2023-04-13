@@ -14,7 +14,6 @@ import {
 } from "@mui/material";
 import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import HealingTwoToneIcon from "@mui/icons-material/HealingTwoTone";
 import "./NavBar.css";
 import useAuth from "../../../Hooks/useAuth";
 import { useHistory } from "react-router-dom";
@@ -160,9 +159,11 @@ const Navbar = () => {
               variant="h6"
               align="center"
               component="div"
-              sx={{ flexGrow: 1, pt: 2, display: { xs: "flex", md: "none" } }}
+              sx={{ flexGrow: 1,  display: { xs: "flex", md: "none" },alignItems: "center",
+                justifyContent:"between " }}
             >
-              <HealingTwoToneIcon fontSize="large" /> HealthCare System
+            <img className="logo" src={LOGO} alt="Logo" />
+ HealthCare System
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {/*-------- large skin navigation-------- */}
