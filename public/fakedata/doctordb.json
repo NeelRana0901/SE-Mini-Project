@@ -2,57 +2,57 @@
     "docs": [
         {
             "doc_id": 1,
-            "name": "Lee S. Williamson",
-            "specialize": "Cardiology",
-            "doc_img": "https://i.ibb.co/b6SDFTN/01.jpg"
+            "name": "Dr. Yesha Chokshi",
+            "specialize": "Doctor for WomanCare",
+            "doc_img": "https://www.spiralshealth.com/public/userdata/doctor/TWxvNEdUcmhoakVpUEpleml3NEwyZz09/1614522685407648_spirals46290_1615627444.png"
         },
         {
             "doc_id": 2,
-            "name": "Greg S. Grinstead",
-            "specialize": "Neurology",
-            "doc_img": "https://i.ibb.co/gW26qY2/02.jpg"
+            "name": "Dr. Ramesh Patel",
+            "specialize": "Doctor for BackPain",
+            "doc_img": "https://images.drlogy.com/assets/uploads/img/practice-profile/doctors/photo/dr-ramesh-n-patel-67f2fb1ee0e-b98ce30db01.jpg"
         },
         {
             "doc_id": 3,
-            "name": "Roger K. Jackson",
-            "specialize": "Orthopedics",
-            "doc_img": "https://i.ibb.co/hsyxYVj/03.jpg"
+            "name": "Dr. Ashutosh Jokhakar",
+            "specialize": "Doctor for Malaria",
+            "doc_img": "https://assets.lybrate.com/img/documents/doctor/dp/2bd34e5483e476fb6ed17e12a5fb8f31/General-Physician-SanjayGajera-Surat-7ec31f"
         },
         {
             "doc_id": 4,
-            "name": "Frank T. Grimsley",
-            "specialize": "Neurology",
-            "doc_img": "https://i.ibb.co/86xBJSh/04.jpg"
+            "name": "Dr. Pradip Martin",
+            "specialize": "Doctor for Food Poisoning",
+            "doc_img": "https://media.licdn.com/dms/image/C4E03AQHqFV4FTvRYgw/profile-displayphoto-shrink_200_200/0/1517035668255?e=1681948800&v=beta&t=ITis7wN5WPwvxdcpWm7lE1J-fkVpN4-ognAopp_0S54"
         },
         {
             "doc_id": 5,
-            "name": "Rudolph V. Spitler",
-            "specialize": "Cardiology",
-            "doc_img": "https://i.ibb.co/hWD7NVx/05.jpg"
+            "name": "Dr. Sanjay Agrawal",
+            "specialize": "Doctor for Diabetes",
+            "doc_img": "https://media.licdn.com/dms/image/C5603AQF51XNq2_tOkw/profile-displayphoto-shrink_800_800/0/1517553000076?e=2147483647&v=beta&t=Lkj-gJCJTdOMmvZUWC1c74KrFXH-wCfQwWiN7ICoq3M"
         },
         {
             "doc_id": 6,
-            "name": "Erik R. Faulkner",
-            "specialize": "Cardiology",
-            "doc_img": "https://i.ibb.co/hYWtLy1/06.jpg"
+            "name": "Dr. Shailesh Gandhi",
+            "specialize": "Doctor for Typhoid",
+            "doc_img": "https://imagesx.practo.com/providers/dr-shailesh-gandhi-general-physician-surat-6c3d0acb-ed82-404e-a320-5f0106330bd3.jpg?i_type=t_100x100-4x"
         },
         {
             "doc_id": 7,
-            "name": "Phillip L. Williams",
-            "specialize": "Neurology",
-            "doc_img": "https://i.ibb.co/dPtTnys/07.jpg"
+            "name": "Dr. Jayesh Dbhuwala",
+            "specialize": "Doctor for SkinCare",
+            "doc_img": "https://media.licdn.com/dms/image/C5103AQGtchFP2Ui7Gg/profile-displayphoto-shrink_200_200/0/1516976699160?e=1684972800&v=beta&t=8mEr_yWVRcseEIe5C6VijEok3pE91xtvn1FiX_YZqfM"
         },
         {
             "doc_id": 8,
-            "name": "Johnny R. Atterberry",
-            "specialize": "Orthopedics",
-            "doc_img": "https://i.ibb.co/ypmBR9k/08.jpg"
+            "name": "Dr. Sharat Gupta",
+            "specialize": "Doctor for Cancer",
+            "doc_img": "https://content3.jdmagicbox.com/comp/surat/g8/0261px261.x261.170927134225.u3g8/catalogue/dr-sharat-gupta-city-light-skin-clinic-citylight-road-surat-dermatologists-ds2nd5lqtt.jpg"
         },
         {
             "doc_id": 9,
-            "name": "Michael I. Johnson",
-            "specialize": "Medecine",
-            "doc_img": "https://i.ibb.co/nj8qcCS/09.jpg"
+            "name": "Dr. Kaushik Soni",
+            "specialize": "Doctor for Fever",
+            "doc_img": "https://content3.jdmagicbox.com/comp/ahmedabad/44/079p81244/catalogue/dr-kaushik-vaidya-sola-road-ahmedabad-general-physician-doctors-nw3lu.jpg"
         }
     ]
 }

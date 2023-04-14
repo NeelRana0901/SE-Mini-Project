@@ -20,14 +20,13 @@ import LoadingScreen from "../../LoadingScreen/LoadingScreen";
 
 const Doctors = () => {
   const doctors = useDocData();
-
   const swalAlert = () => {
     console.log("swal is clicked");
-    return swal("Write the data here:", {
+    return swal("Describe your problem here:", {
       content: "input",
     }).then((value) => {
       swal(
-        `You Appointment data is :➥ ${value} You will get a confirmation Email soon if the slot is free. We are trying to make it automated asap. Till then be patient`
+        ` Your problem is ${value}, You will get a confirmation Email soon if the slot is free. Till then be patient`
       );
     });
   };
@@ -37,7 +36,6 @@ const Doctors = () => {
         <>
           <Box
             sx={{
-              // bgcolor: "#fce4ec",
               bgcolor: "#b2a4ff",
               color: "black",
               p: 2,
@@ -66,7 +64,9 @@ const Doctors = () => {
                       sx={{
                         mx: "auto",
                         boxShadow: 10,
-                        maxWidth: 345,
+                        maxWidth: 350,
+                        maxHeight: 600,
+                        paddingTop: 2,
                         transition: "0.5s all ease-in-out",
                         ":hover": {
                           color: "#5555ab",
@@ -78,7 +78,15 @@ const Doctors = () => {
                         },
                       }}
                     >
-                      <CardActionArea>
+                      <CardActionArea
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          textAlign: "center",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
                         <Avatar
                           alt="doctor image"
                           src={doctor?.doc_img}
@@ -90,17 +98,45 @@ const Doctors = () => {
                         />
 
                         <CardContent
-                          sx={{ display: "flex", mx: "auto", my: 2 }}
+                          sx={{
+                            display: "flex",
+                            mx: "auto",
+                            my: 2,
+                          }}
                         >
-                          <Typography gutterBottom variant="h5" component="div">
-                            Specialist in {doctor.specialize}
+                          <Typography
+                            gutterBottom
+                            sx={{
+                              fontWeight: 100,
+                              display: "flex",
+                              flexDirection: "flex-column",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                            variant="p"
+                            component="div"
+                          >
+                            {doctor.specialize}
                           </Typography>
                         </CardContent>
-                        <Typography gutterBottom variant="h6" component="div">
-                          Dr. {doctor.name}
+                        <Typography
+                          gutterBottom
+                          sx={{ fontWeight: 800 }}
+                          variant="h6"
+                          component="div"
+                        >
+                          {doctor.name}
                         </Typography>
                       </CardActionArea>
-                      <CardActions sx={{ textAlign: "center" }}>
+                      <CardActions
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          textAlign: "center",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
                         <Button
                           onClick={swalAlert}
                           sx={{ mt: 2, mb: 1 }}
@@ -115,7 +151,6 @@ const Doctors = () => {
                   </Grid>
                 ))}
               </Grid>
-
               <HashLink smooth to="/home#home" className="text-style">
                 {" "}
                 <Button

@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import "./ServiceDetails/Services.css";
+import { alignProperty } from "@mui/material/styles/cssUtils";
 // assuming your JSON data is stored in a variable called "doctors"
 const doctors = [
   {
     Doctor_id: "004",
-    Doctor_name: "Dr. Ashutosh V Jokhakar",
+    Doctor_name: "Dr. Ashutosh Jokhakar",
     Treatment_id: "123",
     Treatment_name: "NA",
     Diseases_name: "Malaria",
     Treatment_cost: "NA",
-    "Appointment fee": "450",
+    Appointment_fee: "450",
     Hospital_id: "48",
 
     Area: "Citylight",
@@ -25,7 +26,7 @@ const doctors = [
     Treatment_name: "Chemotherapy",
     Diseases_name: "Cancer",
     Treatment_cost: "NA",
-    "Appointment fee": "300",
+    Appointment_fee: "300",
     Hospital_id: "49",
 
     Area: "Citylight",
@@ -40,7 +41,7 @@ const doctors = [
     Treatment_name: "NA",
     Diseases_name: "fever",
     Treatment_cost: "NA",
-    "Appointment fee": "370",
+    Appointment_fee: "370",
     Hospital_id: "52",
     Area: "Adajan",
     Hospital_name: "Nidan Clinic",
@@ -54,7 +55,7 @@ const doctors = [
     Treatment_name: "NA",
     Diseases_name: "Food Poisoning",
     Treatment_cost: "NA",
-    "Appointment fee": "500",
+    Appointment_fee: "500",
     Hospital_id: "50",
 
     Area: "Citylight",
@@ -64,12 +65,12 @@ const doctors = [
   },
   {
     Doctor_id: "011",
-    Doctor_name: "Dr.Ramesh Patel",
+    Doctor_name: "Dr. Ramesh Patel",
     Treatment_id: "131",
     Treatment_name: "NA",
     Diseases_name: "Back-Pain",
     Treatment_cost: "NA",
-    "Appointment fee": "350",
+    Appointment_fee: "350",
     Hospital_id: "54",
     Area: "Adajan",
     Hospital_name: "BAPS Pramukh Swami Hospital",
@@ -84,7 +85,7 @@ const doctors = [
     Diseases_name: "Diabetes",
     Treatment_name: "NA",
     Treatment_cost: "NA",
-    "Appointment fee": "300",
+    Appointment_fee: "300",
     Hospital_id: "45",
 
     Area: "Citylight",
@@ -99,7 +100,7 @@ const doctors = [
     Treatment_name: "NA",
     Diseases_name: "Typhoid",
     Treatment_cost: "NA",
-    "Appointment fee": "150",
+    Appointment_fee: "150",
     Hospital_id: "46",
 
     Area: "Citylight",
@@ -112,9 +113,9 @@ const doctors = [
     Doctor_name: "Dr. Yesha Chokshi",
     Treatment_id: "122",
     Treatment_name: "Delivery",
-    Diseases_name: "NA",
+    Diseases_name: "WomanCare",
     Treatment_cost: "NA",
-    "Appointment fee": "500",
+    Appointment_fee: "500",
     Hospital_id: "47",
     Area: "Citylight",
     Hospital_name: "Shree Hospital",
@@ -129,15 +130,13 @@ const doctors = [
     Treatment_name: "NA",
     Diseases_name: "Skin related",
     Treatment_cost: "NA",
-    "Appointment fee": "350",
+    Appointment_fee: "350",
     Hospital_id: "51",
     Area: "Citylight",
     Hospital_name: "City light Skin Clinic",
     Hospital_full_address:
       " City light Skin Clinic,22 Upper Ground AgrasenPoint, Citylight Road Surat-395007",
   },
-
-  // add more doctors here...
 ];
 
 const DoctorFinder = () => {
@@ -162,59 +161,62 @@ const DoctorFinder = () => {
 
   return (
     <div className="main-container">
-
-    <div className="doctor-finder">
-      <h2>Find a Doctor</h2>
-      <div>
-        <label htmlFor="disease-select">Select Disease:</label>
-        <select
-          id="disease-select"
-          onChange={(e) => setSelectedDisease(e.target.value)}
-        >
-          <option value="">Select a disease</option>
-          <option value="fever">fever</option>
-          <option value="Malaria">Malaria</option>
-          <option value="Cancer">Cancer</option>
-          <option value="Food Poisoning">Food Poisoning</option>
-          <option value="Back-Pain">Back-Pain</option>
-          <option value="Diabetes">Diabetes</option>
-          <option value="Typhoid">Typhoid</option>
-          <option value="Delivery">Delivery</option>
-          <option value="Skin related">Skin related</option>
-          {/* add more diseases here... */}
-        </select>
+      <div className="doctor-finder">
+        <h2>FIND A DOCTOR</h2>
+        <div>
+          <label htmlFor="disease-select">Select Disease:</label>
+          <select
+            id="disease-select"
+            onChange={(e) => setSelectedDisease(e.target.value)}
+          >
+            <option value="">Select a disease</option>
+            <option value="fever">fever</option>
+            <option value="Malaria">Malaria</option>
+            <option value="Cancer">Cancer</option>
+            <option value="Food Poisoning">Food Poisoning</option>
+            <option value="Back-Pain">Back-Pain</option>
+            <option value="Diabetes">Diabetes</option>
+            <option value="Typhoid">Typhoid</option>
+            <option value="Delivery">Delivery</option>
+            <option value="Skin related">Skin related</option>
+            {/* add more diseases here... */}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="location-select">Select Location:</label>
+          <select
+            id="location-select"
+            onChange={(e) => setSelectedLocation(e.target.value)}
+          >
+            <option value="">Select a location</option>
+            <option value="Citylight">Citylight</option>
+            <option value="Adajan">Adajan</option>
+            {/* add more locations here... */}
+          </select>
+        </div>
+        <div>
+          {getDoctorSuggestions().length === 0 ? (
+            <p>No doctors found.</p>
+          ) : (
+            <>
+              <p>{getDoctorSuggestions().length} doctors found:</p>
+              <br />
+              <ul>
+                {getDoctorSuggestions().map((doctor) => (
+                  <ul key={doctor.Doctor_id} type="disc">
+                    <li> Dortor Name: {doctor.Doctor_name} </li>
+                    <li> Dieases Name: {doctor.Diseases_name} </li>
+                    <li> Treatment Name: {doctor.Treatment_name} </li>
+                    <li> Hospital Name: {doctor.Hospital_name} </li>
+                    <li> Appointment Fees: {doctor.Appointment_fee} </li>
+                    <li> Full Address: ({doctor.Hospital_full_address}) </li>
+                  </ul>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
       </div>
-      <div>
-        <label htmlFor="location-select">Select Location:</label>
-        <select
-          id="location-select"
-          onChange={(e) => setSelectedLocation(e.target.value)}
-        >
-          <option value="">Select a location</option>
-          <option value="Citylight">Citylight</option>
-          <option value="Adajan">Adajan</option>
-          {/* add more locations here... */}
-        </select>
-      </div>
-      <div>
-        {getDoctorSuggestions().length === 0 ? (
-          <p>No doctors found.</p>
-        ) : (
-          <>
-            <p>{getDoctorSuggestions().length} doctors found:</p>
-            <ul>
-              {getDoctorSuggestions().map((doctor) => (
-                <li key={doctor.Doctor_id}>
-                  {doctor.Doctor_name} ({doctor.Treatment_name}) at{" "}
-                  {doctor.Hospital_name}
-                  <div>({doctor.Hospital_full_address})</div>
-                </li>
-              ))}
-            </ul>
-          </>
-        )}
-      </div>
-    </div>
     </div>
   );
 };
