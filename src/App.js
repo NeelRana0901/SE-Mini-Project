@@ -63,9 +63,12 @@ function App() {
               <Route path="/profile">
                 <Login></Login>
               </Route>
-              <Route exact path="/services">
+              <PrivetRoute path="/services">
+                <Services />
+              </PrivetRoute>
+              <PrivetRoute path="/services">
                 <Services></Services>
-              </Route>
+              </PrivetRoute>
               <PrivetRoute exact path="/services/details/:servId">
                 <ServiceDetails></ServiceDetails>
               </PrivetRoute>

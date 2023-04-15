@@ -6,7 +6,7 @@ import useAuth from "../../../Hooks/useAuth";
 import UserProfile from "./UserProfile/UserProfile";
 import { useLocation } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import LOGO from './LoginPage.jpg';
+import LOGO from "./LoginPage.jpg";
 
 const Login = () => {
   const { singInUsingGoogle, user, setUser, setError, setIsLoading } =
@@ -16,6 +16,11 @@ const Login = () => {
   const location = useLocation();
   const history = useHistory();
   const redirect_url = location.state?.from || "/profile";
+
+  // const navigateServices=()=>{
+  //   let path= "/services2"
+  //   navi(path)
+  // }
 
   const handleGoogleSignIn = () => {
     singInUsingGoogle()
@@ -49,7 +54,7 @@ const Login = () => {
             <Container component="main" maxWidth="xs">
               <CssBaseline />
               <Box
-              className="loginPage"
+                className="loginPage"
                 sx={{
                   marginTop: 15,
                   marginBottom: 8,
@@ -61,15 +66,14 @@ const Login = () => {
                 }}
               >
                 {/* google btn */}
-                  <img className="loginImage" src={LOGO}  alt="Logo" />
-                  <Grid item>
-                    <GoogleButton
-                      className="google-btn"
-                      type="dark" // can be light or dark
-                      onClick={handleGoogleSignIn}
-                    />
-                  </Grid>
-
+                <img className="loginImage" src={LOGO} alt="Logo" />
+                <Grid item>
+                  <GoogleButton
+                    className="google-btn"
+                    type="dark" // can be light or dark
+                    onClick={handleGoogleSignIn}
+                  />
+                </Grid>
               </Box>
             </Container>
           </>

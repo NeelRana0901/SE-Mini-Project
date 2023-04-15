@@ -70,7 +70,7 @@ const Navbar = () => {
                 mr: 2,
                 display: { xs: "none", md: "flex" },
                 alignItems: "center",
-                justifyContent:"center"
+                justifyContent: "center",
               }}
             >
               {" "}
@@ -159,11 +159,15 @@ const Navbar = () => {
               variant="h6"
               align="center"
               component="div"
-              sx={{ flexGrow: 1,  display: { xs: "flex", md: "none" },alignItems: "center",
-                justifyContent:"between " }}
+              sx={{
+                flexGrow: 1,
+                display: { xs: "flex", md: "none" },
+                alignItems: "center",
+                justifyContent: "between ",
+              }}
             >
-            <img className="logo" src={LOGO} alt="Logo" />
- HealthCare System
+              <img className="logo" src={LOGO} alt="Logo" />
+              HealthCare System
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {/*-------- large skin navigation-------- */}
@@ -173,7 +177,15 @@ const Navbar = () => {
                   smooth
                   to="/home#home"
                 >
-                  <Button sx={{ my: 2, color: "white", display: "block" }}>
+                  <Button
+                    sx={{
+                      my: 2,
+                      color: "white",
+                      display: "block",
+                      paddingRight: 5,
+                    }}
+                    className="shiv_k"
+                  >
                     Home
                   </Button>
                 </HashLink>
@@ -183,7 +195,14 @@ const Navbar = () => {
                   smooth
                   to="/services#services"
                 >
-                  <Button sx={{ my: 2, color: "white", display: "block" }}>
+                  <Button
+                    sx={{
+                      my: 2,
+                      color: "white",
+                      display: "block",
+                      paddingRight: 5,
+                    }}
+                  >
                     Services
                   </Button>
                 </HashLink>
@@ -193,7 +212,14 @@ const Navbar = () => {
                   smooth
                   to="/doctors#doctors"
                 >
-                  <Button sx={{ my: 2, color: "white", display: "block" }}>
+                  <Button
+                    sx={{
+                      my: 2,
+                      color: "white",
+                      display: "block",
+                      paddingRight: 5,
+                    }}
+                  >
                     Doctors
                   </Button>
                 </HashLink>

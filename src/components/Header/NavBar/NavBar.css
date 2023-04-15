@@ -12,10 +12,10 @@
   background-color: #5555ab;
 }
 .shiv{
-display: flex;
+ display: flex;
 justify-content: center;
-justify-content: space-between;
-align-items: center;
+align-items: center;  
+padding-left: 150px;
 }
 
 .logo{

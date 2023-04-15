@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./ServiceDetails/Services.css";
-import { alignProperty } from "@mui/material/styles/cssUtils";
 // assuming your JSON data is stored in a variable called "doctors"
 const doctors = [
   {
