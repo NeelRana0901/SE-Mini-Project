@@ -182,9 +182,7 @@ const Navbar = () => {
                       my: 2,
                       color: "white",
                       display: "block",
-                      paddingRight: 5,
                     }}
-                    className="shiv_k"
                   >
                     Home
                   </Button>
@@ -200,7 +198,6 @@ const Navbar = () => {
                       my: 2,
                       color: "white",
                       display: "block",
-                      paddingRight: 5,
                     }}
                   >
                     Services
@@ -217,7 +214,6 @@ const Navbar = () => {
                       my: 2,
                       color: "white",
                       display: "block",
-                      paddingRight: 5,
                     }}
                   >
                     Doctors
