@@ -30,7 +30,3 @@ const PrivetRoute = ({ children, ...rest }) => {
 };
 
 export default PrivetRoute;
-
-/* if (!isLoading) {
-    return (<LoadingScreen></LoadingScreen>);
-} */

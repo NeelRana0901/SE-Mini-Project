@@ -11,11 +11,11 @@
 .text-style-fullscrn {
   background-color: #5555ab;
 }
-.shiv{
- display: flex;
+.shiv {
+  display: flex;
 }
 
-.logo{
+.logo {
   width: 70px;
   height: 70px;
   margin: 4px;

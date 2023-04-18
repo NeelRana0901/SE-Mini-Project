@@ -1,8 +1,7 @@
-import { Button, Paper, Typography } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import "./Banner.css";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
 import { HashLink } from "react-router-hash-link";
 
 const Banner = () => {
@@ -21,16 +20,7 @@ const Banner = () => {
               smooth
               to="/appointment#appointment"
               className="text-style"
-            >
-              <Button
-                sx={{ mt: 2 }}
-                variant="contained"
-                className="CheckButton"
-              >
-                Make an Appointment
-                <AddCircleIcon />
-              </Button>
-            </HashLink>
+            ></HashLink>
           </div>
         </div>
       </Paper>

@@ -1,16 +1,13 @@
-/* Add this CSS code to your stylesheet */
 .doctor-finder {
   max-width: 800px;
   width: 80%;
   padding: 25px 55px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #b2a4ff;
   border-radius: 20px;
+  font-size: 19px;
+  color: black;
 }
-@media only screen and(min-width: 768px) {
-  /* .doctor-finder {
-    max-width: 800px;
-  } */
+@media only screen and(max-width: 763px) {
 }
 .main-container {
   display: flex;
@@ -27,14 +24,14 @@
   font-weight: 700;
   margin-bottom: 20px;
   text-align: center;
-  color: #333;
+  color: #000000;
 }
 
 .doctor-finder label {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #555;
+  color: #030000;
   display: block;
 }
 
@@ -46,7 +43,7 @@
   border: 2px solid #ddd;
   width: 100%;
   margin-bottom: 20px;
-  color: #555;
+  color: #4412cc;
 }
 
 .doctor-finder select:focus {
@@ -89,7 +86,6 @@
 
 .doctor-finder .doctor-suggestions li:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .doctor-finder .doctor-suggestions li:after {

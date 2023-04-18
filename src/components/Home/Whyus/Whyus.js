@@ -62,7 +62,7 @@ const Whyus = () => {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  justifyContent:"center",
+                  justifyContent: "center",
                 }}
               >
                 <Card

@@ -6,15 +6,13 @@
 
 .body-link-text-style {
   color: #212121;
-  
 }
 
 .body-link-text-style:hover {
   color: #5555ab;
-  
 }
 
-.loginImage{
+.loginImage {
   height: 100%;
   width: 100%;
-} 
+}

@@ -40,7 +40,6 @@ const ServiceDetails = () => {
   return (
     <Box
       sx={{
-        // bgcolor: "#fce4ec",
         bgcolor: "#e6e6fa",
         color: "primary.main",
         p: 2,
@@ -128,7 +127,6 @@ const ServiceDetails = () => {
             }
           </Grid>
         )}
-
         <HashLink smooth to="/home#home" className="text-style">
           {" "}
           <Button

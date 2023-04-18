@@ -17,11 +17,6 @@ const Login = () => {
   const history = useHistory();
   const redirect_url = location.state?.from || "/profile";
 
-  // const navigateServices=()=>{
-  //   let path= "/services2"
-  //   navi(path)
-  // }
-
   const handleGoogleSignIn = () => {
     singInUsingGoogle()
       .then((result) => {

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./ServiceDetails/Services.css";
-// assuming your JSON data is stored in a variable called "doctors"
 const doctors = [
   {
     Doctor_id: "004",
@@ -11,11 +10,10 @@ const doctors = [
     Treatment_cost: "NA",
     Appointment_fee: "450",
     Hospital_id: "48",
-
     Area: "Citylight",
     Hospital_name: "Suvidha Clinic",
     Hospital_full_address:
-      " Suvidha Clinic, G 15/16, Bhagwati Ashish Complex, Citylight Road Surat 395007",
+      "Suvidha Clinic,G 15/16,Bhagwati Ashish Complex,Citylight Road",
   },
 
   {
@@ -27,11 +25,10 @@ const doctors = [
     Treatment_cost: "NA",
     Appointment_fee: "300",
     Hospital_id: "49",
-
     Area: "Citylight",
     Hospital_name: "Healing Hand Hospital",
     Hospital_full_address:
-      "  2nd floor Prasham Building, City light Road near Bank Of Baroda Surat-395007",
+      "2nd floor Prasham Building,City light Road near Bank Of Baroda",
   },
   {
     Doctor_id: "008",
@@ -44,8 +41,7 @@ const doctors = [
     Hospital_id: "52",
     Area: "Adajan",
     Hospital_name: "Nidan Clinic",
-    Hospital_full_address:
-      " Nidan Clinc,near Gujarat Gas station,Adajan Road Surat-395007",
+    Hospital_full_address: "Nidan Clinc,near Gujarat Gas station,Adajan Road",
   },
   {
     Doctor_id: "006",
@@ -56,11 +52,10 @@ const doctors = [
     Treatment_cost: "NA",
     Appointment_fee: "500",
     Hospital_id: "50",
-
     Area: "Citylight",
     Hospital_name: "Healing Hand Hospital",
     Hospital_full_address:
-      " 3rd floor Prasham Building, City light Road near Bank Of Baroda Surat-395007",
+      "3rd floor Prasham Building,City light Road near Bank Of Baroda",
   },
   {
     Doctor_id: "011",
@@ -74,7 +69,7 @@ const doctors = [
     Area: "Adajan",
     Hospital_name: "BAPS Pramukh Swami Hospital",
     Hospital_full_address:
-      "5QQX+R72, Shri Pramukh Swami Maharaj Marg, Adajan Char Rasta, Adajan, Surat, Gujarat 395009",
+      "Shri Pramukh Swami Maharaj Marg,Adajan Char Rasta,Adajan",
   },
 
   {
@@ -86,11 +81,10 @@ const doctors = [
     Treatment_cost: "NA",
     Appointment_fee: "300",
     Hospital_id: "45",
-
     Area: "Citylight",
     Hospital_name: "Aman Hospital",
     Hospital_full_address:
-      "Diabetologist Clinic 4th Floor, Siddhi Complex, Near ICICI Bank, City Light ,Surat",
+      "Diabetologist Clinic 4th Floor,Siddhi Complex,Near ICICI Bank,City Light",
   },
   {
     Doctor_id: "002",
@@ -101,11 +95,10 @@ const doctors = [
     Treatment_cost: "NA",
     Appointment_fee: "150",
     Hospital_id: "46",
-
     Area: "Citylight",
     Hospital_name: "Shalibhadra Clinic",
     Hospital_full_address:
-      "Shalibhadra Clinic, Ground floor, Shalibhadra Apartment, parle point",
+      "Shalibhadra Clinic,Ground floor,Shalibhadra Apartment,Parle Point",
   },
   {
     Doctor_id: "003",
@@ -119,7 +112,7 @@ const doctors = [
     Area: "Citylight",
     Hospital_name: "Shree Hospital",
     Hospital_full_address:
-      "Shree Hospital 3rd floor Siddhi Shopping Center, Citylight Main,Road,Surat,395007",
+      "Shree Hospital 3rd floor Siddhi Shopping Center,Citylight Main Road",
   },
 
   {
@@ -134,19 +127,17 @@ const doctors = [
     Area: "Citylight",
     Hospital_name: "City light Skin Clinic",
     Hospital_full_address:
-      " City light Skin Clinic,22 Upper Ground AgrasenPoint, Citylight Road Surat-395007",
+      "City light Skin Clinic,22 Upper Ground AgrasenPoint,Citylight Road",
   },
 ];
 
 const DoctorFinder = () => {
-  // state variables to store the user's selected disease and location
   const [selectedDisease, setSelectedDisease] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
 
-  // function to filter doctors based on the selected disease and location
   const getDoctorSuggestions = () => {
     if (!selectedDisease || !selectedLocation) {
-      return []; // if either disease or location is not selected, return an empty array
+      return [];
     }
 
     const matchingDoctors = doctors.filter(
@@ -178,7 +169,6 @@ const DoctorFinder = () => {
             <option value="Typhoid">Typhoid</option>
             <option value="Delivery">Delivery</option>
             <option value="Skin related">Skin related</option>
-            {/* add more diseases here... */}
           </select>
         </div>
         <div>
@@ -190,7 +180,6 @@ const DoctorFinder = () => {
             <option value="">Select a location</option>
             <option value="Citylight">Citylight</option>
             <option value="Adajan">Adajan</option>
-            {/* add more locations here... */}
           </select>
         </div>
         <div>
@@ -203,12 +192,15 @@ const DoctorFinder = () => {
               <ul>
                 {getDoctorSuggestions().map((doctor) => (
                   <ul key={doctor.Doctor_id} type="disc">
-                    <li> Dortor Name: {doctor.Doctor_name} </li>
-                    <li> Dieases Name: {doctor.Diseases_name} </li>
-                    <li> Treatment Name: {doctor.Treatment_name} </li>
-                    <li> Hospital Name: {doctor.Hospital_name} </li>
-                    <li> Appointment Fees: {doctor.Appointment_fee} </li>
-                    <li> Full Address: ({doctor.Hospital_full_address}) </li>
+                    <b> Doctor Name </b>: {doctor.Doctor_name}{" "}
+                    <b>Disease Name</b> : {doctor.Diseases_name}
+                    <br />
+                    <b>Treatment Name</b> : {doctor.Treatment_name}{" "}
+                    <b>Hospital Name</b> : {doctor.Hospital_name}
+                    <br />
+                    <b>Appointment Fees</b> : {doctor.Appointment_fee}{" "}
+                    <b>Full Address </b> : {doctor.Hospital_full_address}
+                    <br />
                   </ul>
                 ))}
               </ul>

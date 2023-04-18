@@ -10,16 +10,12 @@ import {
   sendEmailVerification,
   sendPasswordResetEmail,
   updateProfile,
-  FacebookAuthProvider,
-  GithubAuthProvider,
 } from "firebase/auth";
 import { auth, provider } from "../components/Login/Firebase/Firebase.init";
 
 // initializeAuthentication();
 
 const googleProvider = new GoogleAuthProvider();
-const facebookProvider = new FacebookAuthProvider();
-const githubProvider = new GithubAuthProvider();
 
 const useFirebase = () => {
   const [userName, setUserName] = useState("");
@@ -37,19 +33,8 @@ const useFirebase = () => {
     return signInWithPopup(auth, googleProvider);
   };
 
-  const singInUsingFacebook = () => {
-    // setisLogin(true);
-    return signInWithPopup(auth, facebookProvider);
-  };
-
-  const singInUsingGithub = () => {
-    // setisLogin(true);
-    return signInWithPopup(auth, githubProvider);
-  };
-
   useEffect(() => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
-      //amra jodi unsubscribed function use na kori tahole eta error throw koreb
       if (user) {
         setUser(user);
       } else {
@@ -72,7 +57,7 @@ const useFirebase = () => {
   };
 
   const handleRegister = (e) => {
-    e.preventDefault(); //prevent default ke upore na dile error er dile seta dhorar age reload hoye jabe
+    e.preventDefault();
     //password length validation
     if (password.length < 6) {
       setError("Password should be at least 6 characters");
@@ -159,8 +144,6 @@ const useFirebase = () => {
 
   return {
     singInUsingGoogle,
-    singInUsingFacebook,
-    singInUsingGithub,
     user,
     setUser,
     isLogin,

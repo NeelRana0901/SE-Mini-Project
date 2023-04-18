@@ -26,7 +26,7 @@ const Doctors = () => {
       content: "input",
     }).then((value) => {
       swal(
-        ` Your problem is ${value}, You will get a confirmation Email soon if the slot is free. Till then be patient`
+        `Your problem is ${value}, Accounted Our Doctor is Contact you as soon as Possible. Till then be patient.`
       );
     });
   };
@@ -48,7 +48,6 @@ const Doctors = () => {
               <Typography sx={{ mt: 2, mb: 2, fontWeight: 600 }} variant="h5">
                 Our team always ready to assist you
               </Typography>
-
               <Grid container spacing={3}>
                 {doctors[0]?.map((doctor) => (
                   <Grid
@@ -151,6 +150,23 @@ const Doctors = () => {
                   </Grid>
                 ))}
               </Grid>
+              <Typography sx={{ mt: 2, mb: 2, fontWeight: 600 }} variant="h4">
+                FeedBack
+              </Typography>
+              <Typography
+                sx={{ mt: 2, mb: 2, fontWeight: 400, color: "grey" }}
+                variant="h6"
+              >
+                We value your time and effort to use this website. please give
+                us some valuable feedback by clicking{" "}
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScD8CtTFtPHx_oyQIzrIzMJ-zaeZFnOhuLH5ySMwBCqxxkmSA/viewform?vc=0&c=0&w=1&flr=0"
+                  target="blank"
+                >
+                  {" "}
+                  the link.
+                </a>
+              </Typography>
               <HashLink smooth to="/home#home" className="text-style">
                 {" "}
                 <Button
@@ -162,7 +178,7 @@ const Doctors = () => {
                 </Button>
               </HashLink>
             </Container>
-          </Box>{" "}
+          </Box>
         </>
       ) : (
         <LoadingScreen></LoadingScreen>

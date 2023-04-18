@@ -19,7 +19,7 @@ import useAuth from "../../../Hooks/useAuth";
 import { useHistory } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import LOGO from "./Logo.png";
-//
+
 // const pages = ['home', 'services', 'doctors', 'Appointment', 'about', 'login'];
 const settings = ["Profile", "Logout"];
 
@@ -237,9 +237,7 @@ const Navbar = () => {
                 )}
               </div>
             </Box>
-
             {/* user info and navigation btn */}
-
             {user?.email ? (
               <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="Open settings">
