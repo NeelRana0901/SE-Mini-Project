@@ -130,7 +130,7 @@ const doctors = [
     DocImage:"https://media.licdn.com/dms/image/C5103AQGtchFP2Ui7Gg/profile-displayphoto-shrink_200_200/0/1516976699160?e=1684972800&v=beta&t=8mEr_yWVRcseEIe5C6VijEok3pE91xtvn1FiX_YZqfM",
     Treatment_id: "126",
     Treatment_name: "NA",
-    Diseases_name: "Skin related",
+    Diseases_name: "Skin Related",
     Treatment_cost: "NA",
     Appointment_fee: "350",
     Hospital_id: "51",
@@ -170,7 +170,7 @@ const DoctorFinder = () => {
             onChange={(e) => setSelectedDisease(e.target.value)}
           >
             <option value="">Select a disease</option>
-            <option value="fever">fever</option>
+            <option value="Fever">Fever</option>
             <option value="Malaria">Malaria</option>
             <option value="Cancer">Cancer</option>
             <option value="Food Poisoning">Food Poisoning</option>
@@ -178,7 +178,7 @@ const DoctorFinder = () => {
             <option value="Diabetes">Diabetes</option>
             <option value="Typhoid">Typhoid</option>
             <option value="Delivery">Delivery</option>
-            <option value="Skin related">Skin related</option>
+            <option value="Skin Related">Skin Related</option>
           </select>
         </div>
         <div>
@@ -201,17 +201,17 @@ const DoctorFinder = () => {
               {/* <br /> */}
               <ul>
                 {getDoctorSuggestions().map((doctor) => (
-                  <ul key={doctor.Doctor_id} type="disc">
+                  <ul className="onerow" key={doctor.Doctor_id} type="disc">
                     <img className="doctorsimage" src={doctor.DocImage} />
-                    <b>Doctor Name </b>: {doctor.Doctor_name}
-                    <b>Treatment Specialist </b>: {doctor.Diseases_name} Specialist
+                    <p className="docText">Doctor Name <span className="docSpec">: {doctor.Doctor_name}</span> </p>
+                    <p className="docText">Treatment Specialist <span className="docSpec">: {doctor.Diseases_name} Specialist</span> </p>
+                    <p className="docText">Full Address <span className="docSpec">: {doctor.Hospital_full_address}</span></p> 
                     {/* <br /> */}
                     {/* <b>Treatment Name</b> : {doctor.Treatment_name}{" "} */}
                     {/* <b>Hospital Name</b> : {doctor.Hospital_name} */}
                     {/* <br /> */}
                     {/* <b>Appointment Fees</b> : {doctor.Appointment_fee}{" "} */}
-                    {/* <b>Full Address </b> : {doctor.Hospital_full_address} */}
-                    {/* <br /> */}
+                    {/* <br />*/}
                   </ul>
                 ))}
               </ul>
