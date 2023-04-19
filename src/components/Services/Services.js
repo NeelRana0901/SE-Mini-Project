@@ -197,14 +197,14 @@ const DoctorFinder = () => {
             <p>No Doctor Found</p>
           ) : (
             <>
-              <p>{getDoctorSuggestions().length} doctors found:</p>
-              <br />
+              {/* <p>{getDoctorSuggestions().length} doctors found:</p> */}
+              {/* <br /> */}
               <ul>
                 {getDoctorSuggestions().map((doctor) => (
                   <ul key={doctor.Doctor_id} type="disc">
                     <img className="doctorsimage" src={doctor.DocImage} />
-                    <b>Doctor Name : {doctor.Doctor_name}</b>
-                    <b>Treatment Specialist : {doctor.Diseases_name} Specialist</b>
+                    <b>Doctor Name </b>: {doctor.Doctor_name}
+                    <b>Treatment Specialist </b>: {doctor.Diseases_name} Specialist
                     {/* <br /> */}
                     {/* <b>Treatment Name</b> : {doctor.Treatment_name}{" "} */}
                     {/* <b>Hospital Name</b> : {doctor.Hospital_name} */}
