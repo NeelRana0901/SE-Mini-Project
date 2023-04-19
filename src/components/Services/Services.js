@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./ServiceDetails/Services.css";
+
 const doctors = [
   {
     Doctor_id: "004",
     Doctor_name: "Dr. Ashutosh Jokhakar",
+    DocImage: "https://assets.lybrate.com/img/documents/doctor/dp/2bd34e5483e476fb6ed17e12a5fb8f31/General-Physician-SanjayGajera-Surat-7ec31f",
     Treatment_id: "123",
     Treatment_name: "NA",
     Diseases_name: "Malaria",
@@ -19,6 +21,7 @@ const doctors = [
   {
     Doctor_id: "005",
     Doctor_name: "Dr. Sharat Gupta",
+    DocImage:"https://content3.jdmagicbox.com/comp/surat/g8/0261px261.x261.170927134225.u3g8/catalogue/dr-sharat-gupta-city-light-skin-clinic-citylight-road-surat-dermatologists-ds2nd5lqtt.jpg",
     Treatment_id: "124",
     Treatment_name: "Chemotherapy",
     Diseases_name: "Cancer",
@@ -33,6 +36,7 @@ const doctors = [
   {
     Doctor_id: "008",
     Doctor_name: "Dr. Kaushik Soni",
+    DocImage:"https://content3.jdmagicbox.com/comp/ahmedabad/44/079p81244/catalogue/dr-kaushik-vaidya-sola-road-ahmedabad-general-physician-doctors-nw3lu.jpg",
     Treatment_id: "127",
     Treatment_name: "NA",
     Diseases_name: "fever",
@@ -46,6 +50,7 @@ const doctors = [
   {
     Doctor_id: "006",
     Doctor_name: "Dr. Pradip Martin",
+    DocImage:"https://media.licdn.com/dms/image/C4E03AQHqFV4FTvRYgw/profile-displayphoto-shrink_200_200/0/1517035668255?e=1681948800&v=beta&t=ITis7wN5WPwvxdcpWm7lE1J-fkVpN4-ognAopp_0S54",
     Treatment_id: "125",
     Treatment_name: "NA",
     Diseases_name: "Food Poisoning",
@@ -60,6 +65,7 @@ const doctors = [
   {
     Doctor_id: "011",
     Doctor_name: "Dr. Ramesh Patel",
+    DocImage:"https://images.drlogy.com/assets/uploads/img/practice-profile/doctors/photo/dr-ramesh-n-patel-67f2fb1ee0e-b98ce30db01.jpg",
     Treatment_id: "131",
     Treatment_name: "NA",
     Diseases_name: "Back-Pain",
@@ -75,6 +81,7 @@ const doctors = [
   {
     Doctor_id: "000",
     Doctor_name: "Dr. Sanjay Agrawal",
+    DocImage:"https://media.licdn.com/dms/image/C5603AQF51XNq2_tOkw/profile-displayphoto-shrink_800_800/0/1517553000076?e=2147483647&v=beta&t=Lkj-gJCJTdOMmvZUWC1c74KrFXH-wCfQwWiN7ICoq3M",
     Treatment_id: "120",
     Diseases_name: "Diabetes",
     Treatment_name: "NA",
@@ -89,6 +96,7 @@ const doctors = [
   {
     Doctor_id: "002",
     Doctor_name: " Dr. Shailesh Gandhi",
+    DocImage:"https://imagesx.practo.com/providers/dr-shailesh-gandhi-general-physician-surat-6c3d0acb-ed82-404e-a320-5f0106330bd3.jpg?i_type=t_100x100-4x",
     Treatment_id: "121",
     Treatment_name: "NA",
     Diseases_name: "Typhoid",
@@ -103,6 +111,7 @@ const doctors = [
   {
     Doctor_id: "003",
     Doctor_name: "Dr. Yesha Chokshi",
+    DocImage:"https://www.spiralshealth.com/public/userdata/doctor/TWxvNEdUcmhoakVpUEpleml3NEwyZz09/1614522685407648_spirals46290_1615627444.png",
     Treatment_id: "122",
     Treatment_name: "Delivery",
     Diseases_name: "WomanCare",
@@ -117,7 +126,8 @@ const doctors = [
 
   {
     Doctor_id: "007",
-    Doctor_name: "Dr. Jayesh Dbhuwala",
+    Doctor_name: "Dr. Jayesh Dubhuwala",
+    DocImage:"https://media.licdn.com/dms/image/C5103AQGtchFP2Ui7Gg/profile-displayphoto-shrink_200_200/0/1516976699160?e=1684972800&v=beta&t=8mEr_yWVRcseEIe5C6VijEok3pE91xtvn1FiX_YZqfM",
     Treatment_id: "126",
     Treatment_name: "NA",
     Diseases_name: "Skin related",
@@ -192,6 +202,7 @@ const DoctorFinder = () => {
               <ul>
                 {getDoctorSuggestions().map((doctor) => (
                   <ul key={doctor.Doctor_id} type="disc">
+                    <img src={doctor.DocImage} />
                     <b> Doctor Name </b>: {doctor.Doctor_name}{" "}
                     <b>Disease Name</b> : {doctor.Diseases_name}
                     <br />
