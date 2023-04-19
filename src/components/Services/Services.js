@@ -192,9 +192,9 @@ const DoctorFinder = () => {
             <option value="Adajan">Adajan</option>
           </select>
         </div>
-        <div>
+        <div className="doctorInfo">
           {getDoctorSuggestions().length === 0 ? (
-            <p>No doctors found.</p>
+            <p>No Doctor Found</p>
           ) : (
             <>
               <p>{getDoctorSuggestions().length} doctors found:</p>
@@ -202,16 +202,16 @@ const DoctorFinder = () => {
               <ul>
                 {getDoctorSuggestions().map((doctor) => (
                   <ul key={doctor.Doctor_id} type="disc">
-                    <img src={doctor.DocImage} />
-                    <b> Doctor Name </b>: {doctor.Doctor_name}{" "}
-                    <b>Disease Name</b> : {doctor.Diseases_name}
-                    <br />
-                    <b>Treatment Name</b> : {doctor.Treatment_name}{" "}
-                    <b>Hospital Name</b> : {doctor.Hospital_name}
-                    <br />
-                    <b>Appointment Fees</b> : {doctor.Appointment_fee}{" "}
-                    <b>Full Address </b> : {doctor.Hospital_full_address}
-                    <br />
+                    <img className="doctorsimage" src={doctor.DocImage} />
+                    <b>Doctor Name : {doctor.Doctor_name}</b>
+                    <b>Treatment Specialist : {doctor.Diseases_name} Specialist</b>
+                    {/* <br /> */}
+                    {/* <b>Treatment Name</b> : {doctor.Treatment_name}{" "} */}
+                    {/* <b>Hospital Name</b> : {doctor.Hospital_name} */}
+                    {/* <br /> */}
+                    {/* <b>Appointment Fees</b> : {doctor.Appointment_fee}{" "} */}
+                    {/* <b>Full Address </b> : {doctor.Hospital_full_address} */}
+                    {/* <br /> */}
                   </ul>
                 ))}
               </ul>
