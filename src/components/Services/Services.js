@@ -5,7 +5,8 @@ const doctors = [
   {
     Doctor_id: "004",
     Doctor_name: "Dr. Ashutosh Jokhakar",
-    DocImage: "https://assets.lybrate.com/img/documents/doctor/dp/2bd34e5483e476fb6ed17e12a5fb8f31/General-Physician-SanjayGajera-Surat-7ec31f",
+    DocImage:
+      "https://assets.lybrate.com/img/documents/doctor/dp/2bd34e5483e476fb6ed17e12a5fb8f31/General-Physician-SanjayGajera-Surat-7ec31f",
     Diseases_name: "Malaria",
     Area: "Citylight",
     Hospital_name: "Suvidha Clinic",
@@ -16,7 +17,8 @@ const doctors = [
   {
     Doctor_id: "005",
     Doctor_name: "Dr. Sharat Gupta",
-    DocImage:"https://content3.jdmagicbox.com/comp/surat/g8/0261px261.x261.170927134225.u3g8/catalogue/dr-sharat-gupta-city-light-skin-clinic-citylight-road-surat-dermatologists-ds2nd5lqtt.jpg",
+    DocImage:
+      "https://content3.jdmagicbox.com/comp/surat/g8/0261px261.x261.170927134225.u3g8/catalogue/dr-sharat-gupta-city-light-skin-clinic-citylight-road-surat-dermatologists-ds2nd5lqtt.jpg",
     Diseases_name: "Cancer",
     Area: "Citylight",
     Hospital_name: "Healing Hand Hospital",
@@ -26,7 +28,8 @@ const doctors = [
   {
     Doctor_id: "008",
     Doctor_name: "Dr. Kaushik Soni",
-    DocImage:"https://content3.jdmagicbox.com/comp/ahmedabad/44/079p81244/catalogue/dr-kaushik-vaidya-sola-road-ahmedabad-general-physician-doctors-nw3lu.jpg",
+    DocImage:
+      "https://t3.ftcdn.net/jpg/01/64/16/30/360_F_164163068_xUVhVRrAXuGolVeNQnqHB6ewPPkadRCQ.jpg",
     Diseases_name: "fever",
     Area: "Adajan",
     Hospital_name: "Nidan Clinic",
@@ -35,7 +38,8 @@ const doctors = [
   {
     Doctor_id: "006",
     Doctor_name: "Dr. Pradip Martin",
-    DocImage:"https://media.licdn.com/dms/image/C4E03AQHqFV4FTvRYgw/profile-displayphoto-shrink_200_200/0/1517035668255?e=1681948800&v=beta&t=ITis7wN5WPwvxdcpWm7lE1J-fkVpN4-ognAopp_0S54",
+    DocImage:
+      "https://cdn.msruas.ac.in/ruas/media/images/university/people/2022/Dr.OPK.f1672927923.jpg",
     Diseases_name: "Food Poisoning",
     Area: "Citylight",
     Hospital_name: "Healing Hand Hospital",
@@ -45,7 +49,8 @@ const doctors = [
   {
     Doctor_id: "011",
     Doctor_name: "Dr. Ramesh Patel",
-    DocImage:"https://images.drlogy.com/assets/uploads/img/practice-profile/doctors/photo/dr-ramesh-n-patel-67f2fb1ee0e-b98ce30db01.jpg",
+    DocImage:
+      "https://images.drlogy.com/assets/uploads/img/practice-profile/doctors/photo/dr-ramesh-n-patel-67f2fb1ee0e-b98ce30db01.jpg",
     Diseases_name: "Back-Pain",
     Area: "Adajan",
     Hospital_name: "BAPS Pramukh Swami Hospital",
@@ -56,7 +61,8 @@ const doctors = [
   {
     Doctor_id: "000",
     Doctor_name: "Dr. Sanjay Agrawal",
-    DocImage:"https://media.licdn.com/dms/image/C5603AQF51XNq2_tOkw/profile-displayphoto-shrink_800_800/0/1517553000076?e=2147483647&v=beta&t=Lkj-gJCJTdOMmvZUWC1c74KrFXH-wCfQwWiN7ICoq3M",
+    DocImage:
+      "https://media.licdn.com/dms/image/C5603AQF51XNq2_tOkw/profile-displayphoto-shrink_800_800/0/1517553000076?e=2147483647&v=beta&t=Lkj-gJCJTdOMmvZUWC1c74KrFXH-wCfQwWiN7ICoq3M",
     Diseases_name: "Diabetes",
     Area: "Citylight",
     Hospital_name: "Aman Hospital",
@@ -66,7 +72,8 @@ const doctors = [
   {
     Doctor_id: "002",
     Doctor_name: " Dr. Shailesh Gandhi",
-    DocImage:"https://imagesx.practo.com/providers/dr-shailesh-gandhi-general-physician-surat-6c3d0acb-ed82-404e-a320-5f0106330bd3.jpg?i_type=t_100x100-4x",
+    DocImage:
+      "https://imagesx.practo.com/providers/dr-shailesh-gandhi-general-physician-surat-6c3d0acb-ed82-404e-a320-5f0106330bd3.jpg?i_type=t_100x100-4x",
     Diseases_name: "Typhoid",
     Area: "Citylight",
     Hospital_name: "Shalibhadra Clinic",
@@ -76,7 +83,8 @@ const doctors = [
   {
     Doctor_id: "003",
     Doctor_name: "Dr. Yesha Chokshi",
-    DocImage:"https://www.spiralshealth.com/public/userdata/doctor/TWxvNEdUcmhoakVpUEpleml3NEwyZz09/1614522685407648_spirals46290_1615627444.png",
+    DocImage:
+      "https://www.spiralshealth.com/public/userdata/doctor/TWxvNEdUcmhoakVpUEpleml3NEwyZz09/1614522685407648_spirals46290_1615627444.png",
     Diseases_name: "WomanCare",
     Area: "Citylight",
     Hospital_name: "Shree Hospital",
@@ -87,7 +95,8 @@ const doctors = [
   {
     Doctor_id: "007",
     Doctor_name: "Dr. Jayesh Dubhuwala",
-    DocImage:"https://media.licdn.com/dms/image/C5103AQGtchFP2Ui7Gg/profile-displayphoto-shrink_200_200/0/1516976699160?e=1684972800&v=beta&t=8mEr_yWVRcseEIe5C6VijEok3pE91xtvn1FiX_YZqfM",
+    DocImage:
+      "https://media.licdn.com/dms/image/C5103AQGtchFP2Ui7Gg/profile-displayphoto-shrink_200_200/0/1516976699160?e=1684972800&v=beta&t=8mEr_yWVRcseEIe5C6VijEok3pE91xtvn1FiX_YZqfM",
     Diseases_name: "Skin Related",
     Area: "Citylight",
     Hospital_name: "City light Skin Clinic",
@@ -155,10 +164,23 @@ const DoctorFinder = () => {
               <ul>
                 {getDoctorSuggestions().map((doctor) => (
                   <ul className="onerow" key={doctor.Doctor_id} type="disc">
-                    <img className="doctorsimage" src={doctor.DocImage} />
-                    <p className="docText">Doctor Name <span className="docSpec">: {doctor.Doctor_name}</span> </p>
-                    <p className="docText">Treatment Specialist <span className="docSpec">: {doctor.Diseases_name} Specialist</span> </p>
-                    <p className="docText">Full Address <span className="docSpec">: {doctor.Hospital_full_address}</span></p>
+                    <img className="doctorsimage" src={doctor.DocImage} alt="Doctor" />
+                    <p className="docText">
+                      Doctor Name{" "}
+                      <span className="docSpec">: {doctor.Doctor_name}</span>{" "}
+                    </p>
+                    <p className="docText">
+                      Treatment Specialist{" "}
+                      <span className="docSpec">
+                        : {doctor.Diseases_name} Specialist
+                      </span>{" "}
+                    </p>
+                    <p className="docText">
+                      Full Address{" "}
+                      <span className="docSpec">
+                        : {doctor.Hospital_full_address}
+                      </span>
+                    </p>
                   </ul>
                 ))}
               </ul>
