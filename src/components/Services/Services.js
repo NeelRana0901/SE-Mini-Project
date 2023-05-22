@@ -141,7 +141,6 @@ const DoctorFinder = () => {
             <option value="Back-Pain">Back-Pain</option>
             <option value="Diabetes">Diabetes</option>
             <option value="Typhoid">Typhoid</option>
-            <option value="Delivery">Delivery</option>
             <option value="Skin Related">Skin Related</option>
           </select>
         </div>
